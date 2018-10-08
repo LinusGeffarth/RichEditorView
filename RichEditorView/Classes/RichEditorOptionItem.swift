@@ -84,6 +84,13 @@ public enum RichEditorDefaultOption: RichEditorOption {
         .indent, outdent, orderedList, unorderedList,
         .alignLeft, .alignCenter, .alignRight, .image, .link
     ]
+    
+    public static let basic: [RichEditorDefaultOption] = [
+        .bold, .italic, .underline, .strike,
+        .header(1), .header(2), .header(3),
+        .unorderedList, .orderedList,
+        .alignLeft, .alignCenter, .alignRight
+    ]
 
     // MARK: RichEditorOption
 
@@ -112,7 +119,7 @@ public enum RichEditorDefaultOption: RichEditorOption {
         case .image: name = "insert_image"
         case .link: name = "insert_link"
         }
-        
+                
         let bundle = Bundle(for: RichEditorToolbar.self)
         return UIImage(named: name, in: bundle, compatibleWith: nil)
     }
